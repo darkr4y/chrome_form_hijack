@@ -1,0 +1,20 @@
+{
+  "name": "Request Helper",
+  "version": "1.0",
+  "description": "WAF",
+  "permissions": ["webRequest", 
+                  "<all_urls>",
+                    "tabs"
+                 ],
+  "background": {
+    "scripts": ["inject.js"]
+  },
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": ["http://*/*","https://*/*"],
+      "css": [],
+      "js": ["x.js"]
+    }],
+  "manifest_version": 2
+}
